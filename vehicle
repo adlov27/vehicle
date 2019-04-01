@@ -1,0 +1,63 @@
+/**
+ * @Addison Loverin
+ * @4/1/19
+ */
+public class Vehicles
+{
+    private int horsepower, maxPass, mileage;
+    private boolean goodCondition;
+    private String name;
+    private static int totalManufactured, fleetMileage;
+    public Vehicles()
+    {
+        name = "Nathaniel";
+        horsepower = 25;
+        maxPass = 2;
+        mileage = 6;
+        goodCondition = false;
+        totalManufactured++;
+        fleetMileage += 6;
+    }
+    public Vehicles(int h, int p, int m, boolean c, String n)
+    {
+        name = n;
+        horsepower = h;
+        maxPass = p;
+        mileage = m;
+        goodCondition = c;
+        totalManufactured++;
+        fleetMileage += mileage;
+    }
+    public void repair()
+    {
+        if(goodCondition = false)
+        {
+            goodCondition = true;
+        } 
+        else
+        {
+            System.out.println("Nathaniel is broke beyond repair");
+        }
+    }
+    public int changeHorsepower(int h)
+    {
+        return horsepower+h;
+    }
+    public static int manufactureCount()
+    {
+        return totalManufactured;
+    }
+    public int individualMileage()
+    {
+        return mileage;
+    }
+    public static int fleetMileage()
+    {
+        return fleetMileage;
+    }
+    public String toString()
+    {
+        return "Introducing the (kind of) brand new "+name+" with only "+mileage+" miles on it. Unfortunately, goodcondition is "+
+        goodCondition+" and it can only hold "+maxPass+" people, but the total Manufactured is only "+totalManufactured+". The total fleet mileage is "+fleetMileage;
+    }
+}
